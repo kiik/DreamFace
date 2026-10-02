@@ -2,3 +2,9 @@ title: DreamFace research
 description: Research and prototypes for agentic chat-loop control and context representation.
 theme: minima
 markdown: kramdown
+header_pages:
+  - context-ontology.md
+  - context-treebank.md
+  - console-modes.md
+  - languages-and-terminology.md
+  - whitepaper-outline.md
