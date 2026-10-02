@@ -36,5 +36,6 @@ How do segmentation and selection policies perform across languages, task types,
 - [Console modes](console-modes.md) describes the four control modes.
 - [Languages and terminology](languages-and-terminology.md) describes a path to multilingual research.
 - [Whitepaper outline](whitepaper-outline.md) keeps the academic argument and evidence plan visible.
+- [RFC process](rfcs/0000-rfc-process.md) records how proposals are accepted.
 
 All taxonomies and policies on this site are proposals unless explicitly marked as implemented and evaluated.
