@@ -1,0 +1,15 @@
+{
+  "id": "DF-1.2",
+  "title": "Annotate pilot corpus sentences",
+  "intent": "procedural",
+  "outcome": "Pilot corpus sentences carry communicative-function labels with recorded agreement.",
+  "owner": "annotator-a",
+  "dependsOn": ["DF-1.1"],
+  "status": "active",
+  "requestRef": "seg-0042",
+  "mode": "build",
+  "verification": {
+    "condition": "Agreement is reported for all labels in the release notes.",
+    "evidence": ["corpus release 0.1"]
+  }
+}

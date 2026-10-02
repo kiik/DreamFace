@@ -11,7 +11,7 @@ The four modes are a proposed control surface for the agentic loop. The key dist
 
 ## Work decomposition
 
-Represent the initial request as a root node and classify each bounded item as primarily delegative, procedural, or imperative. Items may receive stable hierarchical identifiers such as `DF-1`, `DF-1.1`, and `DF-1.1.1`. Preserve explicit dependencies and cross-links; sequence labels should not imply that all work is serial.
+Represent the initial request as a root node and classify each bounded item as primarily delegative, procedural, or imperative. Items may receive stable hierarchical identifiers such as `DF-1`, `DF-1.1`, and `DF-1.1.1`; a draft record format exists as [work-item.schema.json](../schema/work-item.schema.json). Preserve explicit dependencies and cross-links; sequence labels should not imply that all work is serial.
 
 Each work item should be small enough to describe with an outcome, owner/actor, inputs, completion condition, and verification evidence. New chat turns may:
 

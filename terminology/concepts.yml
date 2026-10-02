@@ -1,0 +1,66 @@
+# DreamFace terminology register — draft 0.1
+#
+# Stable concept identifiers (DF-T-NNN): never reuse or renumber.
+# Changes to existing concepts follow docs/rfcs/0000-rfc-process.md;
+# additions append the next free ID.
+# Language-specific terms are recorded under terms.<bcp47>;
+# English is the current source language (docs/languages-and-terminology.md).
+version: 0.1
+concepts:
+  - id: DF-T-001
+    preferred: context segment
+    definition: A bounded span or structured unit of conversation context, traceable to a Layer 0 entity, with provenance.
+    scope: A segment is an annotation, not a copy of the source; retention decisions are recorded separately.
+    source: docs/context-ontology.md
+    terms:
+      en: context segment
+  - id: DF-T-002
+    preferred: work item
+    definition: A bounded unit of work with an outcome and a verification condition.
+    source: docs/console-modes.md
+    terms:
+      en: work item
+  - id: DF-T-003
+    preferred: delegative intent
+    definition: Assignment of an outcome or responsibility to an actor.
+    source: docs/context-ontology.md
+    terms:
+      en: delegative intent
+  - id: DF-T-004
+    preferred: procedural intent
+    definition: Specification of a method, sequence, policy, or workflow.
+    source: docs/context-ontology.md
+    terms:
+      en: procedural intent
+  - id: DF-T-005
+    preferred: imperative intent
+    definition: A concrete action request that can be carried out or verified.
+    source: docs/context-ontology.md
+    terms:
+      en: imperative intent
+  - id: DF-T-006
+    preferred: context retention
+    definition: A policy decision to keep, compress, retrieve, or omit a segment for a particular operation, recorded with policy version and rationale.
+    source: docs/context-ontology.md
+    terms:
+      en: context retention
+  - id: DF-T-007
+    preferred: Layer 0
+    definition: The host system's persisted conversation model (messages, parts, events) that DreamFace annotations derive from; currently the OpenCode session schema.
+    scope: Re-verify category names against a pinned host release before implementation.
+    source: docs/context-ontology.md
+    terms:
+      en: Layer 0
+  - id: DF-T-008
+    preferred: agentic context treebank
+    definition: A corpus of agentic sessions annotated with segmentation, function, work-intent, and relationship labels, published treebank-style with guidelines, agreement statistics, and versioned releases.
+    source: docs/context-treebank.md
+    terms:
+      en: agentic context treebank
+  - id: DF-T-009
+    preferred: console mode
+    definition: A named control level for the agentic loop — Plan, Build, Auto, or Horde — defining planning depth, user checkpoints, and delegation.
+    scope: Mode labels do not by themselves imply security guarantees.
+    source: docs/console-modes.md
+    terms:
+      en: console mode

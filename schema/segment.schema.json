@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/kiik/DreamFace/main/schema/segment.schema.json",
+  "title": "DreamFace context segment",
+  "$comment": "Draft 0.1. See schema/README.md for versioning; aligned with docs/context-ontology.md and RFC 0001.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "origin", "granularity"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "origin": {
+      "description": "Traceability to a Layer 0 entity.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["messageID"],
+      "properties": {
+        "sessionID": { "type": "string" },
+        "messageID": { "type": "string" },
+        "partID": { "type": "string" },
+        "span": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["unit", "start", "end"],
+          "properties": {
+            "unit": { "enum": ["character", "byte", "token", "native"] },
+            "start": { "type": "integer", "minimum": 0 },
+            "end": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "granularity": {
+      "enum": ["token", "word", "phrase", "sentence", "paragraph", "section", "message", "exchange", "episode"]
+    },
+    "labels": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "communicative": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Open inventory, tracked via RFC: goal, constraint, preference, question, plan, commitment, decision, explanation, evidence, observation, result, error, unresolved-issue, coordination."
+        },
+        "controlFunction": {
+          "type": "string",
+          "description": "e.g. system/developer instruction; open inventory, tracked via RFC."
+        },
+        "workIntent": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "enum": ["delegative", "procedural", "imperative"] }
+        },
+        "status": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "enum": ["proposed", "accepted", "active", "completed", "superseded", "rejected", "uncertain", "needs-verification"] }
+        },
+        "epistemic": { "enum": ["observation", "inference", "hypothesis", "decision"] }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "target"],
+        "properties": {
+          "type": { "enum": ["contains", "precedes", "responds-to", "derived-from", "supports", "contradicts", "refines", "blocks", "depends-on", "duplicates", "belongs-to-work-item"] },
+          "target": { "type": "string" }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "annotator": { "type": "string" },
+        "time": { "type": "string", "format": "date-time" },
+        "transformedFrom": { "type": "array", "items": { "type": "string" } },
+        "agreement": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[A-Za-z]{2,8}(-[A-Za-z0-9]{1,8})*$",
+      "description": "BCP 47 language tag; preserve mixed-language spans."
+    },
+    "tokenCost": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Measured or estimated cost in the target model's tokenizer; the estimate method is recorded per corpus release."
+    },
+    "retention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision"],
+      "properties": {
+        "decision": { "enum": ["include", "compress", "retrieve-on-demand", "omit"] },
+        "policy": { "type": "string" },
+        "policyVersion": { "type": "string" },
+        "rationale": { "type": "string" }
+      }
+    }
+  }
+}

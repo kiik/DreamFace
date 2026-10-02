@@ -102,7 +102,7 @@ An initial record could contain:
 | `token_cost` | Measured or estimated cost in the target model's tokenizer. |
 | `retention` | Candidate include, compress, retrieve-on-demand, or omit decision, with policy/version and rationale. |
 
-This is a conceptual schema, not a committed wire format. Avoid storing sensitive payloads in public research corpora; define access, consent, and licensing for each dataset.
+A draft wire format exists as [segment.schema.json](../schema/segment.schema.json) (version 0.1, with validating examples in `schema/examples/`); span coordinate units and identifier scope remain open decisions in [RFC 0001](rfcs/0001-context-segments-and-work-item-graphs.md). Avoid storing sensitive payloads in public research corpora; define access, consent, and licensing for each dataset.
 
 ## Statistical and Markov-style hypotheses
 

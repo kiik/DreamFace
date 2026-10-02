@@ -47,7 +47,7 @@ Start with a documented synthetic or licensed pilot corpus. Compare the transcri
 
 ## Open decisions
 
-- Machine-readable serialization and identifier scope.
+- Machine-readable serialization: drafted as JSON Schema 0.1 (`schema/`); identifier scope and span coordinate unit remain open.
 - Whether span offsets use character, byte, token, or format-native coordinates.
 - Which native part types receive DreamFace labels first, and whether a tool part's `state.input` and `state.output` get separate retention decisions.
 - Treebank release policy: stable segment IDs, schema versioning, and agreement reporting.

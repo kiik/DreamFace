@@ -15,7 +15,7 @@ Do not place private conversations, credentials, or identifying tool output into
 
 ## Terminology register
 
-Maintain a shared register with a stable concept identifier, preferred term, definition, scope note, examples, source, and language-specific preferred/alternate terms. The English terms in the project are provisional until reviewed.
+Maintain a shared register with a stable concept identifier, preferred term, definition, scope note, examples, source, and language-specific preferred/alternate terms. The register is seeded as machine-readable data in [terminology/concepts.yml](../terminology/concepts.yml) with stable concept identifiers (`DF-T-NNN`). The English terms in the project are provisional until reviewed.
 
 Initial concepts to register:
 

@@ -1,0 +1,29 @@
+{
+  "id": "seg-0042",
+  "origin": {
+    "sessionID": "ses_1",
+    "messageID": "msg_7",
+    "partID": "prt_19",
+    "span": { "unit": "character", "start": 18, "end": 74 }
+  },
+  "granularity": "sentence",
+  "labels": {
+    "communicative": ["constraint"],
+    "workIntent": ["procedural"]
+  },
+  "relations": [
+    { "type": "belongs-to-work-item", "target": "DF-1.2" }
+  ],
+  "provenance": {
+    "annotator": "annotator-a",
+    "time": "2026-10-02T12:00:00Z"
+  },
+  "language": "en",
+  "tokenCost": 31,
+  "retention": {
+    "decision": "include",
+    "policy": "pilot-baseline",
+    "policyVersion": "0.1",
+    "rationale": "active constraint for pending work"
+  }
+}
