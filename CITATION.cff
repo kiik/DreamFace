@@ -1,0 +1,27 @@
+# Replace the entity author with personal author names
+# (given-names / family-names) for academic citation.
+cff-version: 1.2.0
+message: >-
+  If you use DreamFace research materials, schemas, or corpora,
+  please cite them using this metadata.
+type: software
+title: DreamFace
+version: 0.1.0
+date-released: '2026-10-02'
+url: 'https://github.com/kiik/DreamFace'
+repository-code: 'https://github.com/kiik/DreamFace'
+abstract: >-
+  Research framing, machine-readable schemas, and corpora for controllable
+  agentic chat loops: a Layer 0 context ontology aligned with the OpenCode
+  message model, agentic context treebanks, and Plan/Build/Auto/Horde console
+  modes.
+keywords:
+  - agentic systems
+  - context engineering
+  - discourse annotation
+  - treebank
+  - human-agent interaction
+license: CC-BY-4.0
+authors:
+  - name: kiik
+    website: 'https://github.com/kiik'

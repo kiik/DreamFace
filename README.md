@@ -29,6 +29,8 @@ These are research definitions, not yet implemented guarantees. See [the mode pr
 - [Console modes](docs/console-modes.md)
 - [Multilingual corpus and terminology plan](docs/languages-and-terminology.md)
 - [Whitepaper outline](docs/whitepaper-outline.md)
+- [RFC process](docs/rfcs/0000-rfc-process.md)
+- Machine-readable artifacts: [segment schema](schema/segment.schema.json), [work-item schema](schema/work-item.schema.json), [terminology register](terminology/concepts.yml)
 - [RFC template](docs/rfcs/rfc-template.md)
 
 ## Status
@@ -37,8 +39,8 @@ This repository is at the research-framing stage. Proposed taxonomies and polici
 
 ## Contributing and citation
 
-Use GitHub issues for bounded questions and experiments, and RFCs for changes to shared concepts or interfaces. Research claims should identify their evidence and limitations. Add citation metadata and a recommended citation here when the project has a stable publication or release.
+Use GitHub issues for bounded questions and experiments, and RFCs for changes to shared concepts or interfaces (see the [RFC process](docs/rfcs/0000-rfc-process.md)). Research claims should identify their evidence and limitations. Cite DreamFace via `CITATION.cff` (GitHub renders BibTeX/APA from it).
 
 ## License
 
-No license has been selected yet. Until one is added, the repository contents remain subject to applicable copyright; do not assume they are available for reuse.
+Research materials — documentation, RFCs, schemas, terminology, and corpora — are licensed [CC BY 4.0](LICENSE). Current and future code is MIT-licensed under [LICENSE-CODE](LICENSE-CODE). Corpus releases may add access terms where sessions contain non-synthetic, consented data.
